@@ -1,0 +1,20 @@
+# Crear tabla
+create 'sensor_data', 'info'
+
+# Insertar datos
+put 'sensor_data', 'sensor001', 'info:tipo', 'temperatura'
+put 'sensor_data', 'sensor001', 'info:valor', '22.5'
+put 'sensor_data', 'sensor001', 'info:unidad', '°C'
+put 'sensor_data', 'sensor001', 'info:ciudad', 'Bogotá'
+
+# Consultar un registro
+get 'sensor_data', 'sensor001'
+
+# Actualizar valor
+put 'sensor_data', 'sensor001', 'info:valor', '23.0'
+
+# Eliminar campo
+delete 'sensor_data', 'sensor001', 'info:unidad'
+
+# Escanear la tabla
+scan 'sensor_data'
